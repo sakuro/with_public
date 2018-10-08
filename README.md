@@ -1,8 +1,6 @@
 # WithPublic
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/with_public`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides Module#with_public which make private methods public temporalily.
 
 ## Installation
 
@@ -10,6 +8,12 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'with_public'
+```
+
+Or if you have an environment for test, instead:
+
+```ruby
+gem 'with_public', group: :test
 ```
 
 And then execute:
@@ -22,7 +26,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In a context you want some private instance methods with explicit receivers, write
+
+    using TheClass.with_public(:private_method_1, :private_method_2, ...)
+
+then you can call these methods wihtout Object#send.
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/with_public.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sakuro/with_public.
 
 ## License
 
