@@ -17,8 +17,6 @@ Gem::Specification.new do |spec|
   spec.homepage = 'https://github.com/sakuro/with_public'
   spec.license = 'MIT'
 
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/sakuro/with_public.git'
   spec.metadata['changelog_uri'] = 'https://github.com/sakuro/with_public/blob/master/CHANGELOG.md'
