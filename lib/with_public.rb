@@ -1,5 +1,9 @@
-require "with_public/version"
+# frozen_string_literal: true
 
+require 'with_public/version'
+
+# A module to define with_public method to Module class.
+# With this module, one can test private methods without Object#send.
 module WithPublic
   # Returns a refiner module to make target methods public
   #

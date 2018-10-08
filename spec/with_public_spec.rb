@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require 'with_public'
 
 RSpec.describe WithPublic do
   class Target
     private
+
     def this_is_a_private_method
       'called'
     end
