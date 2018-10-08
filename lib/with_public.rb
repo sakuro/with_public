@@ -15,12 +15,12 @@ module WithPublic
   #     end
   #
   #     Calling Foo#bar will not raise NoMethodError in this context.
-  def with_public(*method_names)
+  def with_public(*methods)
     target = self
     Module.new.tap do |refiner|
       refiner.module_eval do
         refine target do
-          public(*method_names)
+          public(*methods)
         end
       end
     end
