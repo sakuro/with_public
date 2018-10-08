@@ -12,9 +12,8 @@ module WithPublic
   # @example Make Foo#bar public
   #     RSpec.describe Foo do
   #       using Foo.with_public(:bar)
+  #       # Calling Foo#bar will not raise NoMethodError in this context.
   #     end
-  #
-  #     Calling Foo#bar will not raise NoMethodError in this context.
   def with_public(*methods)
     target = self
     Module.new.tap do |refiner|
